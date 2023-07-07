@@ -27,6 +27,61 @@
       color: #333;
       
     }
+
+    .LinkedIn-profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .LinkedIn-logo {
+      width: 60px;
+      height: 60px;
+      background-image: url('LinkedIn-logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+
+    .instagram-profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .instagram-logo {
+      width: 60px;
+      height: 60px;
+      background-image: url('instagram-logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+    /* Styling for Facebook Page*/
+    .Facebook-profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .Facebook-logo {
+      width: 60px;
+      height: 60px;
+      background-image: url('Facebook-logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+
   </style>
   <script>
     // JavaScript function to show the next page and hide the current page
@@ -41,30 +96,39 @@
 <body>
   <!-- Book Cover Page -->
   <div class="book-page" id="cover">
-    <h1>Book Cover</h1>
-    <p>Welcome to the Book Website!</p>
+    <h1 style="color: ;">Mai-Pal</h1>
+    <p>Welcome to Socail Book!</p>
     <a href="javascript:void(0);" onclick="showNextPage('cover', 'page1')">Start Reading</a>
   </div>
 
   <!-- Page 1 -->
   <div class="book-page" id="page1">
-    <h1>Page 1</h1>
-    <p>This is Page 1 of the book.</p>
+    <div class="LinkedIn-profile">
+    <div class="LinkedIn-logo" onclick="window.location.href='https://www.LinkedIn.com'"></div>
+    <h1>LinkedIn</h1>
+    <p>Checkout My LinkedIn</p>
     <a href="javascript:void(0);" onclick="showNextPage('page1', 'page2')">Next Page</a>
+    </div>
   </div>
 
   <!-- Page 2 -->
   <div class="book-page" id="page2">
-    <h1>Page 2</h1>
-    <p>This is Page 2 of the book.</p>
+    <div class="instagram-profile">
+    <div class="instagram-logo" onclick="window.location.href='https://www.instagram.com'"></div>
+    <h1>Instagram</h1>
+    <p>Check out my profile.</p>
     <a href="javascript:void(0);" onclick="showNextPage('page2', 'page3')">Next Page</a>
+    </div>
   </div>
 
   <!-- Page 3 -->
   <div class="book-page" id="page3">
-    <h1>Page 3</h1>
-    <p>This is Page 3 of the book.</p>
+    <div class="Facebook-profile">
+    <div class="Facebook-logo" onclick="window.location.href='https://www.Facebook.com'"></div>
+    <h1 style="color: #3b5998;">Facebook</h1>
+    <p>Checkout my profile.</p>
     <a href="javascript:void(0);" onclick="showNextPage('page3', 'page4')">Next Page</a>
+    </div>
   </div>
 
   <!-- Page 4 -->
