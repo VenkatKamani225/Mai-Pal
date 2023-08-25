@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Website</title>
+  <style>
+    /* CSS Styling to fit the book in the center of the page*/
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    /* CSS styling for the book pages */
+    .book-page {
+      display: none; /* Hide all book pages by default */
+      width: 85mm;
+      height: 55mm;
+      border: 1px solid black;
+      padding: 10px;
+      margin: 10px;
+      background-color: #f2f2f2;
+      border-radius: 10px;
+      padding: 20px;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+      color: #333;
+      
+    }
+  </style>
+  <script>
+    // JavaScript function to show the next page and hide the current page
+    function showNextPage(currentPageId, nextPageId) {
+      var currentPage = document.getElementById(currentPageId);
+      var nextPage = document.getElementById(nextPageId);
+      currentPage.style.display = "none";
+      nextPage.style.display = "block";
+    }
+  </script>
+</head>
+<body>
+  <!-- Book Cover Page -->
+  <div class="book-page" id="cover">
+    <h1>Book Cover</h1>
+    <p>Welcome to the Book Website!</p>
+    <a href="javascript:void(0);" onclick="showNextPage('cover', 'page1')">Start Reading</a>
+  </div>
+
+  <!-- Page 1 -->
+  <div class="book-page" id="page1">
+    <h1>Page 1</h1>
+    <p>This is Page 1 of the book.</p>
+    <a href="javascript:void(0);" onclick="showNextPage('page1', 'page2')">Next Page</a>
+  </div>
+
+  <!-- Page 2 -->
+  <div class="book-page" id="page2">
+    <h1>Page 2</h1>
+    <p>This is Page 2 of the book.</p>
+    <a href="javascript:void(0);" onclick="showNextPage('page2', 'page3')">Next Page</a>
+  </div>
+
+  <!-- Page 3 -->
+  <div class="book-page" id="page3">
+    <h1>Page 3</h1>
+    <p>This is Page 3 of the book.</p>
+    <a href="javascript:void(0);" onclick="showNextPage('page3', 'page4')">Next Page</a>
+  </div>
+
+  <!-- Page 4 -->
+  <div class="book-page" id="page4">
+    <h1>Page 4</h1>
+    <p>This is Page 4 of the book.</p>
+    <a href="javascript:void(0);" onclick="showNextPage('page4', 'cover')">Book Cover</a>
+  </div>
+
+  <!-- Add more pages as needed -->
+
+  <script>
+    // JavaScript code to display the cover page initially
+    document.getElementById('cover').style.display = 'block';
+  </script>
+
+</body>
+</html>
