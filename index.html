@@ -4,7 +4,7 @@
   <title>Book Website</title>
   <style>
     /* CSS Styling to fit the book in the center of the page*/
-    body {
+    .bookbody {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -27,7 +27,79 @@
       color: #333;
       
     }
+
+    .Cover-Page{
+        
+        display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    
+    }
+
+    .LinkedIn-profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .LinkedIn-logo {
+      width: 60px;
+      height: 60px;
+      background-image: url('LinkedIn-logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+
+    .instagram-profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .instagram-logo {
+      width: 60px;
+      height: 60px;
+      background-image: url('instagram-logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+    /* Styling for Facebook Page*/
+    .Facebook-profile {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+    }
+
+    .Facebook-logo {
+      width: 60px;
+      height: 60px;
+      background-image: url('Facebook-logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      cursor: pointer;
+    }
+    .text-effect{
+      
+      top: 0 px;
+      left: 0 px;
+     
+    }
+
   </style>
+  <link rel="stylesheet" type="text/css" href="HeaderRefstyle.css">
   <script>
     // JavaScript function to show the next page and hide the current page
     function showNextPage(currentPageId, nextPageId) {
@@ -39,47 +111,78 @@
   </script>
 </head>
 <body>
+  <header>
+  <div class="logo">
+    <h1>THE Card</h1>
+  </div>
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="login.html">Login</a></li>
+      <li><a href="register.html">Register</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+  <div class="bookbody">
   <!-- Book Cover Page -->
   <div class="book-page" id="cover">
-    <h1>Book Cover</h1>
-    <p>Welcome to the Book Website!</p>
+    <div class="Cover-Page">
+    <h1 style="color:blueviolet ;">THE Book</h1>
+    <p>Welcome to Social Book!</p>
     <a href="javascript:void(0);" onclick="showNextPage('cover', 'page1')">Start Reading</a>
+    </div>
   </div>
 
   <!-- Page 1 -->
   <div class="book-page" id="page1">
-    <h1>Page 1</h1>
-    <p>This is Page 1 of the book.</p>
+    <div class="LinkedIn-profile">
+    <div class="LinkedIn-logo" onclick="window.location.href='https://www.LinkedIn.com'"></div>
+    <h1 style="color: #0A66C2;">LinkedIn</h1>
+    <p>Checkout My LinkedIn</p>
     <a href="javascript:void(0);" onclick="showNextPage('page1', 'page2')">Next Page</a>
+    </div>
   </div>
 
   <!-- Page 2 -->
   <div class="book-page" id="page2">
-    <h1>Page 2</h1>
-    <p>This is Page 2 of the book.</p>
+    <div class="instagram-profile">
+    <div class="instagram-logo" onclick="window.location.href='https://www.instagram.com'"></div>
+    <h1 style="color: #E1306C;">Instagram</h1>
+    <p>Check out my profile.</p>
     <a href="javascript:void(0);" onclick="showNextPage('page2', 'page3')">Next Page</a>
+    </div>
   </div>
 
   <!-- Page 3 -->
   <div class="book-page" id="page3">
-    <h1>Page 3</h1>
-    <p>This is Page 3 of the book.</p>
+    <div class="Facebook-profile">
+    <div class="Facebook-logo" onclick="window.location.href='https://www.Facebook.com'"></div>
+    <h1 style="color: #3b5998;">Facebook</h1>
+    <p>Checkout my profile.</p>
     <a href="javascript:void(0);" onclick="showNextPage('page3', 'page4')">Next Page</a>
+    </div>
   </div>
 
   <!-- Page 4 -->
   <div class="book-page" id="page4">
-    <h1>Page 4</h1>
-    <p>This is Page 4 of the book.</p>
+    <div class="Cover-Page">
+    <h1>Last Page</h1>
+    <p>This is Last Page of the book.</p>
     <a href="javascript:void(0);" onclick="showNextPage('page4', 'cover')">Book Cover</a>
+    </div>
   </div>
 
   <!-- Add more pages as needed -->
-
+</div>
   <script>
     // JavaScript code to display the cover page initially
     document.getElementById('cover').style.display = 'block';
   </script>
+<footer>
+  <p>&copy; 2023 My Website. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
